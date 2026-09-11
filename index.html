@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta name="theme-color" content="#0f5132">
+
+    <title>Welcome to ECS</title>
+
+    <style>
+        /* ================================
+           GENERAL
+        ================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --dark-green: #063c2a;
+            --main-green: #0f5132;
+            --medium-green: #187047;
+            --light-green: #e8f3ec;
+            --very-light-green: #f4f9f6;
+            --gold: #d7ad59;
+            --light-gold: #f4e5bd;
+            --dark-text: #173029;
+            --grey-text: #687873;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            color: var(--dark-text);
+            background-color: #f2f7f4;
+
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button,
+        input {
+            font-family: inherit;
+        }
+
+        /* ================================
+           FULL-PAGE SCHOOL HEADER
+        ================================= */
+
+        .school-header {
+            position: relative;
+
+            width: 100%;
+            min-height: 240px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            padding: 28px 20px;
+
+            color: var(--white);
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--dark-green),
+                    var(--medium-green)
+                );
+        }
+
+        .school-header::before,
+        .school-header::after {
+            content: "";
+
+            position: absolute;
+
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+        }
+
+        .school-header::before {
+            width: 330px;
+            height: 330px;
+
+            top: -210px;
+            right: -80px;
+        }
+
+        .school-header::after {
+            width: 300px;
+            height: 300px;
+
+            bottom: -220px;
+            left: -70px;
+        }
+
+        .school-logo {
+            position: relative;
+            z-index: 2;
+
+            width: 190px;
+            max-width: 80%;
+
+            padding: 10px;
+
+            background-color: var(--white);
+            border-radius: 18px;
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .school-header h1 {
+            position: relative;
+            z-index: 2;
+
+            margin: 16px 0 4px;
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 28px;
+        }
+
+        .school-header p {
+            position: relative;
+            z-index: 2;
+
+            margin: 0;
+
+            color: rgba(255, 255, 255, 0.76);
+            font-size: 15px;
+        }
+
+        .header-decoration {
+            position: absolute;
+
+            width: 8px;
+            height: 8px;
+
+            background-color: var(--gold);
+            border-radius: 50%;
+        }
+
+        .decoration-one {
+            top: 32px;
+            left: 15%;
+        }
+
+        .decoration-two {
+            right: 18%;
+            bottom: 35px;
+
+            width: 13px;
+            height: 13px;
+        }
+
+        .decoration-three {
+            top: 48%;
+            right: 8%;
+        }
+
+        /* ================================
+           MAIN CONTENT
+        ================================= */
+
+        .page-content {
+            width: 100%;
+            max-width: 850px;
+
+            margin: 0 auto;
+            padding: 45px 25px 60px;
+        }
+
+        .level-badge {
+            display: none;
+
+            width: fit-content;
+
+            margin: 0 auto 18px;
+            padding: 9px 16px;
+
+            color: var(--main-green);
+            background-color: var(--light-green);
+
+            border-radius: 30px;
+
+            font-size: 13px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        /* ================================
+           SEARCH AREA
+        ================================= */
+
+        .search-area {
+            text-align: center;
+
+            animation: showSection 0.6s ease;
+        }
+
+        .search-area.hidden {
+            display: none;
+        }
+
+        .small-title {
+            margin: 0 0 12px;
+
+            color: var(--main-green);
+
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .search-area h2 {
+            margin: 0;
+
+            color: var(--dark-green);
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(37px, 7vw, 60px);
+            line-height: 1.1;
+        }
+
+        .search-area h2 span {
+            display: block;
+
+            margin-top: 7px;
+
+            color: var(--medium-green);
+            font-size: 0.62em;
+        }
+
+        .instructions {
+            max-width: 650px;
+
+            margin: 22px auto 0;
+
+            color: var(--grey-text);
+
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .french-instruction {
+            margin-top: 2px;
+        }
+
+        form {
+            max-width: 600px;
+
+            margin: 30px auto 0;
+            padding: 27px;
+
+            background-color: var(--white);
+            border: 1px solid #dce7e1;
+            border-radius: 20px;
+
+            box-shadow:
+                0 15px 40px rgba(7, 61, 43, 0.09);
+        }
+
+        label {
+            display: block;
+
+            margin-bottom: 10px;
+
+            font-size: 15px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            min-height: 56px;
+
+            padding: 0 17px;
+
+            color: var(--dark-text);
+            background-color: #fbfdfc;
+
+            border: 2px solid #cad8d1;
+            border-radius: 13px;
+
+            outline: none;
+
+            font-size: 16px;
+
+            transition: 0.2s;
+        }
+
+        input:focus {
+            border-color: var(--main-green);
+
+            box-shadow:
+                0 0 0 4px rgba(15, 81, 50, 0.12);
+        }
+
+        .search-button {
+            width: 100%;
+            min-height: 55px;
+
+            margin-top: 12px;
+            padding: 0 20px;
+
+            color: var(--white);
+            background-color: var(--main-green);
+
+            border: none;
+            border-radius: 13px;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        .search-button:hover {
+            background-color: var(--medium-green);
+            transform: translateY(-2px);
+        }
+
+        .help-text {
+            margin: 10px 0 0;
+
+            color: #798983;
+            font-size: 13px;
+        }
+
+        .error-message {
+            display: none;
+
+            max-width: 600px;
+
+            margin: 18px auto 0;
+            padding: 16px;
+
+            color: #8d2f2d;
+            background-color: #fff2f1;
+
+            border-left: 4px solid #c84c49;
+            border-radius: 7px;
+
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .error-message.visible {
+            display: block;
+        }
+
+        /* ================================
+           FULL STUDENT RESULT
+        ================================= */
+
+        .student-result {
+            display: none;
+
+            position: relative;
+
+            width: 100%;
+
+            text-align: center;
+
+            animation: showSection 0.7s ease;
+        }
+
+        .student-result.visible {
+            display: block;
+        }
+
+        .result-decoration {
+            position: absolute;
+
+            color: var(--gold);
+
+            font-size: 25px;
+
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        .star-one {
+            top: 10px;
+            left: 4%;
+        }
+
+        .star-two {
+            top: 120px;
+            right: 5%;
+
+            animation-delay: 0.5s;
+        }
+
+        .star-three {
+            top: 310px;
+            left: 8%;
+
+            animation-delay: 1s;
+        }
+
+        .welcome-small {
+            margin: 0 0 10px;
+
+            color: var(--main-green);
+
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .student-result h2 {
+            max-width: 700px;
+
+            margin: 0 auto;
+
+            color: var(--dark-green);
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(38px, 7vw, 62px);
+            line-height: 1.1;
+        }
+
+        .welcome-message {
+            max-width: 700px;
+
+            margin: 20px auto 40px;
+
+            color: var(--grey-text);
+
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        /* Vertical student information */
+
+        .information-list {
+            position: relative;
+
+            max-width: 600px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            margin: 0 auto;
+        }
+
+        .information-card {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            min-height: 92px;
+
+            padding: 18px 22px;
+
+            text-align: left;
+
+            background-color: var(--white);
+            border: 1px solid #dce8e1;
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 25px rgba(7, 61, 43, 0.08);
+
+            transition: 0.2s;
+        }
+
+        .information-card:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 30px rgba(7, 61, 43, 0.12);
+        }
+
+        .information-icon {
+            min-width: 55px;
+            height: 55px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-right: 17px;
+
+            color: var(--main-green);
+            background-color: var(--light-green);
+
+            border-radius: 50%;
+
+            font-size: 24px;
+        }
+
+        .information-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .information-label {
+            margin-bottom: 5px;
+
+            color: var(--grey-text);
+
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .information-value {
+            color: var(--dark-green);
+
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Motivational message */
+
+        .motivation-card {
+            max-width: 650px;
+
+            margin: 40px auto 0;
+            padding: 30px;
+
+            color: var(--dark-green);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--light-gold),
+                    #fff9e9
+                );
+
+            border: 1px solid #ecd99e;
+            border-radius: 20px;
+
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 21px;
+            font-weight: bold;
+            line-height: 1.5;
+
+            box-shadow:
+                0 10px 30px rgba(160, 120, 45, 0.12);
+        }
+
+        .motivation-card::before {
+            content: "✦";
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: var(--main-green);
+            font-size: 25px;
+        }
+
+        /* Search again button */
+
+        .restart-button {
+            margin-top: 28px;
+            padding: 12px 22px;
+
+            color: var(--main-green);
+            background-color: transparent;
+
+            border: 2px solid var(--main-green);
+            border-radius: 30px;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        .restart-button:hover {
+            color: var(--white);
+            background-color: var(--main-green);
+        }
+
+        .page-footer {
+            margin-top: 45px;
+
+            color: #7c8e87;
+
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        /* ================================
+           ANIMATIONS
+        ================================= */
+
+        @keyframes showSection {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes floating {
+            0%,
+            100% {
+                transform: translateY(0) rotate(0);
+            }
+
+            50% {
+                transform: translateY(-8px) rotate(10deg);
+            }
+        }
+
+        /* ================================
+           PHONE DESIGN
+        ================================= */
+
+        @media screen and (max-width: 650px) {
+            .school-header {
+                min-height: 215px;
+                padding: 25px 15px;
+            }
+
+            .school-logo {
+                width: 155px;
+            }
+
+            .school-header h1 {
+                font-size: 22px;
+            }
+
+            .page-content {
+                padding: 35px 17px 50px;
+            }
+
+            form {
+                padding: 20px;
+            }
+
+            .information-card {
+                min-height: 83px;
+                padding: 15px;
+            }
+
+            .information-icon {
+                min-width: 48px;
+                height: 48px;
+
+                margin-right: 13px;
+
+                font-size: 21px;
+            }
+
+            .information-value {
+                font-size: 17px;
+            }
+
+            .result-decoration {
+                opacity: 0.5;
+                font-size: 19px;
+            }
+
+            .motivation-card {
+                padding: 23px 18px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Full-width ECS header -->
+
+    <header class="school-header">
+
+        <span class="header-decoration decoration-one"></span>
+        <span class="header-decoration decoration-two"></span>
+        <span class="header-decoration decoration-three"></span>
+
+        <img
+            src= "ecs-logo.png"
+            alt="Evergreen Community School logo"
+            class="school-logo"
+        >
+
+        <h1>Evergreen Community School</h1>
+
+        <p>Learn • Grow • Belong</p>
+
+    </header>
+
+
+    <main class="page-content">
+
+        <!-- Level from the QR code -->
+
+        <div
+            id="levelBadge"
+            class="level-badge"
+        ></div>
+
+
+        <!-- Search section -->
+
+        <section
+            id="searchArea"
+            class="search-area"
+        >
+
+            <p class="small-title">
+                FIRST DAY • PREMIER JOUR
+            </p>
+
+            <h2>
+                Welcome to ECS
+                <span>Bienvenue à l’ECS</span>
+            </h2>
+
+            <p class="instructions">
+                Enter your full name exactly as written in
+                your school registration.
+            </p>
+
+            <p class="instructions french-instruction">
+                Écris ton nom complet exactement comme dans
+                ton inscription scolaire.
+            </p>
+
+            <form id="searchForm">
+
+                <label for="studentName">
+                    Full name • Nom complet
+                </label>
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Example: Lina Karim Haddad"
+                    autocomplete="off"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    class="search-button"
+                >
+                    Find my class • Trouver ma classe
+                </button>
+
+                <p class="help-text">
+                    First name + father’s name + family name
+                </p>
+
+            </form>
+
+            <div
+                id="errorMessage"
+                class="error-message"
+            ></div>
+
+        </section>
+
+
+        <!-- Student result section -->
+
+        <section
+            id="studentResult"
+            class="student-result"
+            aria-live="polite"
+        >
+
+            <span class="result-decoration star-one">✦</span>
+            <span class="result-decoration star-two">★</span>
+            <span class="result-decoration star-three">✦</span>
+
+            <p
+                id="resultSmallTitle"
+                class="welcome-small"
+            ></p>
+
+            <h2 id="studentWelcome"></h2>
+
+            <p
+                id="welcomeMessage"
+                class="welcome-message"
+            ></p>
+
+
+            <div class="information-list">
+
+                <!-- Department -->
+
+                <div class="information-card">
+
+                    <div class="information-icon">
+                        🎓
+                    </div>
+
+                    <div class="information-text">
+
+                        <span
+                            id="departmentLabel"
+                            class="information-label"
+                        ></span>
+
+                        <span
+                            id="departmentValue"
+                            class="information-value"
+                        ></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Level and section -->
+
+                <div class="information-card">
+
+                    <div class="information-icon">
+                        📚
+                    </div>
+
+                    <div class="information-text">
+
+                        <span
+                            id="classLabel"
+                            class="information-label"
+                        ></span>
+
+                        <span
+                            id="classValue"
+                            class="information-value"
+                        ></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Building -->
+
+                <div class="information-card">
+
+                    <div class="information-icon">
+                        🏫
+                    </div>
+
+                    <div class="information-text">
+
+                        <span
+                            id="buildingLabel"
+                            class="information-label"
+                        ></span>
+
+                        <span
+                            id="buildingValue"
+                            class="information-value"
+                        ></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Floor -->
+
+                <div class="information-card">
+
+                    <div class="information-icon">
+                        🪜
+                    </div>
+
+                    <div class="information-text">
+
+                        <span
+                            id="floorLabel"
+                            class="information-label"
+                        ></span>
+
+                        <span
+                            id="floorValue"
+                            class="information-value"
+                        ></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Room -->
+
+                <div class="information-card">
+
+                    <div class="information-icon">
+                        🚪
+                    </div>
+
+                    <div class="information-text">
+
+                        <span
+                            id="roomLabel"
+                            class="information-label"
+                        ></span>
+
+                        <span
+                            id="roomValue"
+                            class="information-value"
+                        ></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="motivationCard"
+                class="motivation-card"
+            ></div>
+
+
+            <button
+                id="restartButton"
+                class="restart-button"
+                type="button"
+            ></button>
+
+        </section>
+
+
+        <footer class="page-footer">
+            Evergreen Community School
+            <br> 2026-2027
+        </footer>
+
+    </main>
+
+
+    <script>
+        /* ==============================================
+           STUDENTS
+
+           Replace these examples with the real students.
+        ============================================== */
+
+        const students = [
+            {
+                fullName: "Lina Karim Haddad",
+                department: "French",
+                level: "EB6",
+                section: "A",
+                building: "Bâtiment 1",
+                floor: "Premier étage",
+                room: "Salle 104"
+            },
+
+            {
+                fullName: "Jad Rami Nammour",
+                department: "French",
+                level: "EB7",
+                section: "B",
+                building: "Bâtiment 2",
+                floor: "Rez-de-chaussée",
+                room: "Salle 203"
+            },
+
+            {
+                fullName: "Maya Samir Khoury",
+                department: "French",
+                level: "EB8",
+                section: "A",
+                building: "Bâtiment 2",
+                floor: "Premier étage",
+                room: "Salle 214"
+            },
+
+            {
+                fullName: "Nour Ali Saad",
+                department: "French",
+                level: "EB9",
+                section: "C",
+                building: "Bâtiment 2",
+                floor: "Deuxième étage",
+                room: "Salle 226"
+            },
+
+            {
+                fullName: "Elie Georges Daher",
+                department: "French",
+                level: "Seconde",
+                section: "A",
+                building: "Bâtiment 3",
+                floor: "Premier étage",
+                room: "Salle 304"
+            },
+
+            {
+                fullName: "Sarah Fadi Saliba",
+                department: "French",
+                level: "Première",
+                section: "B",
+                building: "Bâtiment 3",
+                floor: "Deuxième étage",
+                room: "Salle 316"
+            },
+
+            {
+                fullName: "Rita Joseph Azar",
+                department: "French",
+                level: "Terminale",
+                section: "A",
+                building: "Bâtiment 3",
+                floor: "Troisième étage",
+                room: "Salle 327"
+            },
+
+            {
+                fullName: "Nour Elias Nammour",
+                department: "English",
+                level: "G6",
+                section: "A",
+                building: "Building 1",
+                floor: "First floor",
+                room: "Room 108"
+            },
+
+            {
+                fullName: "Lea Walid Karam",
+                department: "English",
+                level: "G7",
+                section: "B",
+                building: "Building 1",
+                floor: "Second floor",
+                room: "Room 118"
+            },
+
+            {
+                fullName: "Omar Nabil Hamdan",
+                department: "English",
+                level: "G8",
+                section: "A",
+                building: "Building 2",
+                floor: "First floor",
+                room: "Room 218"
+            },
+
+            {
+                fullName: "Maria Tony Rizk",
+                department: "English",
+                level: "G9",
+                section: "C",
+                building: "Building 2",
+                floor: "Second floor",
+                room: "Room 229"
+            },
+
+            {
+                fullName: "Karl Michel Abi Raad",
+                department: "English",
+                level: "G10",
+                section: "A",
+                building: "Building 3",
+                floor: "First floor",
+                room: "Room 307"
+            },
+
+            {
+                fullName: "Yara Hassan Daher",
+                department: "English",
+                level: "G11",
+                section: "B",
+                building: "Building 3",
+                floor: "Second floor",
+                room: "Room 318"
+            },
+
+            {
+                fullName: "Anthony Roy Hanna",
+                department: "English",
+                level: "G12",
+                section: "A",
+                building: "Building 3",
+                floor: "Third floor",
+                room: "Room 329"
+            }
+        ];
+
+
+        /* Motivational messages */
+
+        const frenchMessages = [
+            "Cette année est la tienne : apprends, grandis et brille !",
+            "Une nouvelle aventure commence aujourd’hui. Rends-la inoubliable !",
+            "Sois curieux(se), courageux(se) et crois toujours en toi !",
+            "Ta place est prête et ton nouveau voyage commence maintenant !",
+            "Rêve grand, avance avec confiance et laisse briller ta lumière !"
+        ];
+
+        const englishMessages = [
+            "This is your year to learn, grow and shine!",
+            "A new adventure begins today. Make it unforgettable!",
+            "Be curious, be courageous and always believe in yourself!",
+            "Your place is ready and your new journey begins now!",
+            "Dream big, move forward with confidence and let your light shine!"
+        ];
+
+
+        /* HTML elements */
+
+        const searchArea =
+            document.getElementById("searchArea");
+
+        const searchForm =
+            document.getElementById("searchForm");
+
+        const studentNameInput =
+            document.getElementById("studentName");
+
+        const errorMessage =
+            document.getElementById("errorMessage");
+
+        const studentResult =
+            document.getElementById("studentResult");
+
+        const levelBadge =
+            document.getElementById("levelBadge");
+
+        const resultSmallTitle =
+            document.getElementById("resultSmallTitle");
+
+        const studentWelcome =
+            document.getElementById("studentWelcome");
+
+        const welcomeMessage =
+            document.getElementById("welcomeMessage");
+
+        const departmentLabel =
+            document.getElementById("departmentLabel");
+
+        const departmentValue =
+            document.getElementById("departmentValue");
+
+        const classLabel =
+            document.getElementById("classLabel");
+
+        const classValue =
+            document.getElementById("classValue");
+
+        const buildingLabel =
+            document.getElementById("buildingLabel");
+
+        const buildingValue =
+            document.getElementById("buildingValue");
+
+        const floorLabel =
+            document.getElementById("floorLabel");
+
+        const floorValue =
+            document.getElementById("floorValue");
+
+        const roomLabel =
+            document.getElementById("roomLabel");
+
+        const roomValue =
+            document.getElementById("roomValue");
+
+        const motivationCard =
+            document.getElementById("motivationCard");
+
+        const restartButton =
+            document.getElementById("restartButton");
+
+
+        /* Read QR-code information */
+
+        const websiteParameters =
+            new URLSearchParams(window.location.search);
+
+        const selectedDepartment =
+            websiteParameters.get("department");
+
+        const selectedLevel =
+            websiteParameters.get("level");
+
+
+        if (selectedDepartment || selectedLevel) {
+            levelBadge.style.display = "block";
+
+            if (selectedDepartment === "French") {
+                levelBadge.textContent =
+                    `Département français • ${selectedLevel || ""}`;
+            } else if (selectedDepartment === "English") {
+                levelBadge.textContent =
+                    `English Department • ${selectedLevel || ""}`;
+            } else {
+                levelBadge.textContent =
+                    selectedLevel || "";
+            }
+        }
+
+
+        /* Normalize names */
+
+        function normalizeName(name) {
+            return name
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .replace(/\s+/g, " ")
+                .trim()
+                .toLowerCase();
+        }
+
+
+        /* Search */
+
+        searchForm.addEventListener(
+            "submit",
+            function (event) {
+                event.preventDefault();
+
+                const enteredName =
+                    normalizeName(studentNameInput.value);
+
+                if (enteredName.split(" ").length < 2) {
+                    showError(
+                        "Please enter your complete name. " +
+                        "Écris ton nom complet, s’il te plaît."
+                    );
+
+                    return;
+                }
+
+                const foundStudent =
+                    students.find(function (student) {
+
+                        const correctName =
+                            normalizeName(student.fullName) ===
+                            enteredName;
+
+                        const correctDepartment =
+                            !selectedDepartment ||
+                            normalizeName(student.department) ===
+                            normalizeName(selectedDepartment);
+
+                        const correctLevel =
+                            !selectedLevel ||
+                            normalizeName(student.level) ===
+                            normalizeName(selectedLevel);
+
+                        return (
+                            correctName &&
+                            correctDepartment &&
+                            correctLevel
+                        );
+                    });
+
+
+                if (!foundStudent) {
+                    showError(
+                        "Name not found in this level. " +
+                        "Nom introuvable dans ce niveau. " +
+                        "Please verify the spelling or ask an ECS staff member."
+                    );
+
+                    return;
+                }
+
+                showStudent(foundStudent);
+            }
+        );
+
+
+        /* Error */
+
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorMessage.classList.add("visible");
+
+            studentNameInput.focus();
+        }
+
+
+        /* Display the student */
+
+        function showStudent(student) {
+            errorMessage.classList.remove("visible");
+
+            /* Hide the entire search section */
+
+            searchArea.classList.add("hidden");
+
+            /* Show the result section */
+
+            studentResult.classList.add("visible");
+
+
+            const messageNumber =
+                student.fullName.length % frenchMessages.length;
+
+
+            if (student.department === "French") {
+
+                document.documentElement.lang = "fr";
+
+                resultSmallTitle.textContent =
+                    "Bienvenue à Evergreen Community School";
+
+                studentWelcome.textContent =
+                    `Bienvenue, ${student.fullName} !`;
+
+                welcomeMessage.textContent =
+                    "Nous sommes très heureux de t’accueillir. " +
+                    "Voici toutes les informations pour rejoindre ta classe.";
+
+                departmentLabel.textContent =
+                    "Département";
+
+                departmentValue.textContent =
+                    "Département français";
+
+                classLabel.textContent =
+                    "Niveau et section";
+
+                classValue.textContent =
+                    `${student.level} – Section ${student.section}`;
+
+                buildingLabel.textContent =
+                    "Bâtiment";
+
+                buildingValue.textContent =
+                    student.building;
+
+                floorLabel.textContent =
+                    "Étage";
+
+                floorValue.textContent =
+                    student.floor;
+
+                roomLabel.textContent =
+                    "Salle";
+
+                roomValue.textContent =
+                    student.room;
+
+                motivationCard.textContent =
+                    frenchMessages[messageNumber];
+
+                restartButton.textContent =
+                    "Chercher un autre nom";
+
+            } else {
+
+                document.documentElement.lang = "en";
+
+                resultSmallTitle.textContent =
+                    "Welcome to Evergreen Community School";
+
+                studentWelcome.textContent =
+                    `Welcome, ${student.fullName}!`;
+
+                welcomeMessage.textContent =
+                    "We are very happy to have you with us. " +
+                    "Here is everything you need to find your classroom.";
+
+                departmentLabel.textContent =
+                    "Department";
+
+                departmentValue.textContent =
+                    "English Department";
+
+                classLabel.textContent =
+                    "Grade and section";
+
+                classValue.textContent =
+                    `${student.level} – Section ${student.section}`;
+
+                buildingLabel.textContent =
+                    "Building";
+
+                buildingValue.textContent =
+                    student.building;
+
+                floorLabel.textContent =
+                    "Floor";
+
+                floorValue.textContent =
+                    student.floor;
+
+                roomLabel.textContent =
+                    "Classroom";
+
+                roomValue.textContent =
+                    student.room;
+
+                motivationCard.textContent =
+                    englishMessages[messageNumber];
+
+                restartButton.textContent =
+                    "Search another name";
+            }
+
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+
+        /* Return to the search */
+
+        restartButton.addEventListener(
+            "click",
+            function () {
+
+                studentResult.classList.remove("visible");
+                searchArea.classList.remove("hidden");
+
+                studentNameInput.value = "";
+
+                studentNameInput.focus();
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
+        );
+    </script>
+
+</body>
+</html>
