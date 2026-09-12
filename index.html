@@ -5,50 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0f5132">
-    <link rel="stylesheet" href="style.css">
 
     <title>Welcome to ECS</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Full-width ECS header -->
-
     <header class="school-header">
 
-        <span class="header-decoration decoration-one"></span>
-        <span class="header-decoration decoration-two"></span>
-        <span class="header-decoration decoration-three"></span>
+        <span class="header-dot dot-one"></span>
+        <span class="header-dot dot-two"></span>
 
         <img
-            src= "ecs-logo.png"
+            src="ecs-logo.png"
             alt="Evergreen Community School logo"
             class="school-logo"
         >
 
         <h1>Evergreen Community School</h1>
-
         <p>Learn • Grow • Belong</p>
 
     </header>
 
-
     <main class="page-content">
 
-        <!-- Level from the QR code -->
+        <div id="levelBadge" class="level-badge"></div>
 
-        <div
-            id="levelBadge"
-            class="level-badge"
-        ></div>
+        <!-- SEARCH PAGE -->
 
-
-        <!-- Search section -->
-
-        <section
-            id="searchArea"
-            class="search-area"
-        >
+        <section id="searchArea" class="search-area">
 
             <p class="small-title">
                 FIRST DAY • PREMIER JOUR
@@ -60,13 +47,13 @@
             </h2>
 
             <p class="instructions">
-                Enter your full name exactly as written in
-                your school registration.
+                Enter your full name exactly as written in your school
+                registration.
             </p>
 
             <p class="instructions french-instruction">
-                Écris ton nom complet exactement comme dans
-                ton inscription scolaire.
+                Écris ton nom complet exactement comme dans ton inscription
+                scolaire.
             </p>
 
             <form id="searchForm">
@@ -78,33 +65,27 @@
                 <input
                     type="text"
                     id="studentName"
-                    placeholder="Example: Lina Karim Haddad"
+                    placeholder="First name, father’s name and family name"
                     autocomplete="off"
                     required
                 >
 
-                <button
-                    type="submit"
-                    class="search-button"
-                >
+                <button type="submit" class="search-button">
                     Find my class • Trouver ma classe
                 </button>
 
                 <p class="help-text">
-                    First name + father’s name + family name
+                    The first letter of each name will be capitalized
+                    automatically.
                 </p>
 
             </form>
 
-            <div
-                id="errorMessage"
-                class="error-message"
-            ></div>
+            <div id="errorMessage" class="error-message"></div>
 
         </section>
 
-
-        <!-- Student result section -->
+        <!-- STUDENT RESULT -->
 
         <section
             id="studentResult"
@@ -112,35 +93,22 @@
             aria-live="polite"
         >
 
-            <span class="result-decoration star-one">✦</span>
-            <span class="result-decoration star-two">★</span>
-            <span class="result-decoration star-three">✦</span>
+            <span class="result-star star-one">✦</span>
+            <span class="result-star star-two">★</span>
+            <span class="result-star star-three">✦</span>
 
-            <p
-                id="resultSmallTitle"
-                class="welcome-small"
-            ></p>
+            <p id="resultSmallTitle" class="result-small-title"></p>
 
             <h2 id="studentWelcome"></h2>
 
-            <p
-                id="welcomeMessage"
-                class="welcome-message"
-            ></p>
-
+            <p id="welcomeMessage" class="welcome-message"></p>
 
             <div class="information-list">
 
-                <!-- Department -->
-
                 <div class="information-card">
-
-                    <div class="information-icon">
-                        🎓
-                    </div>
+                    <div class="information-icon">🎓</div>
 
                     <div class="information-text">
-
                         <span
                             id="departmentLabel"
                             class="information-label"
@@ -150,22 +118,13 @@
                             id="departmentValue"
                             class="information-value"
                         ></span>
-
                     </div>
-
                 </div>
 
-
-                <!-- Level and section -->
-
                 <div class="information-card">
-
-                    <div class="information-icon">
-                        📚
-                    </div>
+                    <div class="information-icon">📚</div>
 
                     <div class="information-text">
-
                         <span
                             id="classLabel"
                             class="information-label"
@@ -175,47 +134,29 @@
                             id="classValue"
                             class="information-value"
                         ></span>
-
                     </div>
-
                 </div>
 
-
-                <!-- Building -->
-
                 <div class="information-card">
-
-                    <div class="information-icon">
-                        🏫
-                    </div>
+                    <div class="information-icon">🏫</div>
 
                     <div class="information-text">
-
                         <span
-                            id="buildingLabel"
+                            id="blockLabel"
                             class="information-label"
                         ></span>
 
                         <span
-                            id="buildingValue"
+                            id="blockValue"
                             class="information-value"
                         ></span>
-
                     </div>
-
                 </div>
 
-
-                <!-- Floor -->
-
                 <div class="information-card">
-
-                    <div class="information-icon">
-                        🪜
-                    </div>
+                    <div class="information-icon">🪜</div>
 
                     <div class="information-text">
-
                         <span
                             id="floorLabel"
                             class="information-label"
@@ -225,44 +166,14 @@
                             id="floorValue"
                             class="information-value"
                         ></span>
-
                     </div>
-
-                </div>
-
-
-                <!-- Room -->
-
-                <div class="information-card">
-
-                    <div class="information-icon">
-                        🚪
-                    </div>
-
-                    <div class="information-text">
-
-                        <span
-                            id="roomLabel"
-                            class="information-label"
-                        ></span>
-
-                        <span
-                            id="roomValue"
-                            class="information-value"
-                        ></span>
-
-                    </div>
-
                 </div>
 
             </div>
 
+            <div id="classDirection" class="class-direction"></div>
 
-            <div
-                id="motivationCard"
-                class="motivation-card"
-            ></div>
-
+            <div id="motivationCard" class="motivation-card"></div>
 
             <button
                 id="restartButton"
@@ -272,15 +183,13 @@
 
         </section>
 
-
         <footer class="page-footer">
             Evergreen Community School
-            <br> 2026-2027
         </footer>
 
     </main>
 
-<script src="StudentList.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
