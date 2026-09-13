@@ -192,30 +192,30 @@ const studentsByClass = {
     /* GRADE 7 C — 24 STUDENTS */
 
     G7C: [
-Adam Ihab Halaweh
-Ahmad Samer Ahmad
-Ali Hasan Abou Taam
-Alice Hasan Hassouna
-Dina Mazen Al Oud
-Ghassan Mohammad Ali Houmani
-Haidar Mohammad El Khansa
-Joudi Khaled Kaddouha
-Karim Aref Haidar
-Lamia Ibrahim Tirani
-Lilia Bilal Hijazi
-Mahdi Ali Dia
-Manessa Hani Faour
-Maryam Haitham Joumaa Al Masri
-Mohammad Jawad Bassam Haysoun
-Mona Issa Dokmak
-Nai Rabih Enjbar
-Naya Hamza Fayez
-Naya Wissam Faour
-Rema Mohamad Moussa
-Salma Fadi Klaib
-Tia Mohamad Al Sakka
-Yasmina Shadi Barakat
-Youssef Rami Jalloul
+"Adam Ihab Halaweh" ,
+"Ahmad Samer Ahmad" ,
+"Ali Hasan Abou Taam" ,
+"Alice Hasan Hassouna" ,
+"Dina Mazen Al Oud" ,
+"Ghassan Mohammad Ali Houmani" ,
+"Haidar Mohammad El Khansa" ,
+"Joudi Khaled Kaddouha" ,
+"Karim Aref Haidar" ,
+"Lamia Ibrahim Tirani" ,
+"Lilia Bilal Hijazi" ,
+"Mahdi Ali Dia" ,
+"Manessa Hani Faour" ,
+"Maryam Haitham Joumaa Al Masri" ,
+"Mohammad Jawad Bassam Haysoun" ,
+"Mona Issa Dokmak" ,
+"Nai Rabih Enjbar" ,
+"Naya Hamza Fayez" ,
+"Naya Wissam Faour" ,
+"Rema Mohamad Moussa" ,
+"Salma Fadi Klaib" ,
+"Tia Mohamad Al Sakka" ,
+"Yasmina Shadi Barakat" ,
+"Youssef Rami Jalloul"
         // Continue until 24 students
     ],
 
@@ -358,30 +358,30 @@ Youssef Rami Jalloul
     /* GRADE 10 A — 24 STUDENTS */
 
     G10A: [
-Abed El Karim Assem Kreidieh
-Adam Issam Ousseily
-Adam Talal Shaddad
-Ali Amin Zreik
-Ali Mohamad Fahs
-Ali Al Reda Ali Fawzi
-Ali Al Rida Abbas Al Outa
-Celena Hasan Termos
-Celine Imad Shakhashero
-Dana Hasan Al Halabi
-Ghina Hisham Marrash
-Hoor Abdallah Al Souhail
-Hussein Dib Youssef
-Jude Ramzi Malaeb
-Laith Louay Samman
-Malek Tarek Sabban
-Maria Kassem Saad
-Mohamad Abdul latif Ezz El Dine
-Mohammad Jawad Hasan Nasreddine
-Nay Adham Khoueis
-Nour Imad Ibrahim
-Reine Imad Abou Naja
-Taha Bilal Shatila
-Tatiana Khodour Yamout
+"Abed El Karim Assem Kreidieh" ,
+"Adam Issam Ousseily" ,
+"Adam Talal Shaddad" ,
+"Ali Amin Zreik" ,
+"Ali Mohamad Fahs" ,
+"Ali Al Reda Ali Fawzi" ,
+"Ali Al Rida Abbas Al Outa" ,
+"Celena Hasan Termos" ,
+"Celine Imad Shakhashero" ,
+"Dana Hasan Al Halabi" ,
+"Ghina Hisham Marrash" ,
+"Hoor Abdallah Al Souhail" ,
+"Hussein Dib Youssef" ,
+"Jude Ramzi Malaeb" ,
+"Laith Louay Samman" ,
+"Malek Tarek Sabban" ,
+"Maria Kassem Saad" ,
+"Mohamad Abdul latif Ezz El Dine" ,
+"Mohammad Jawad Hasan Nasreddine" ,
+"Nay Adham Khoueis" ,
+"Nour Imad Ibrahim" ,
+"Reine Imad Abou Naja" ,
+"Taha Bilal Shatila" ,
+"Tatiana Khodour Yamout"
         // Continue until 24 students
     ],
 
@@ -389,29 +389,29 @@ Tatiana Khodour Yamout
     /* GRADE 10 B — 23 STUDENTS */
 
     G10B: [
-Adam Zakaria Baalbaki
-Ali Hassan Termos
-Ali Hussein Younes
-Alma Khalil Abdel Sater
-Amira Samia Al Amir Ayyash Al Sahmarani
-Celina Rabih Al Massalkhi
-Fatima Nader Taher
-Ghalia Nader Awwad
-Hala Youssef Al Moujarkash
-Jawad Mohammad Al Sayed
-Karim Walid Zaatary
-Lara Jihad AL Jaroudi
-Layan Samer Mouawiya
-Luna Riad Malaeb
-Maarouf Restom Al Kayssi
-Malek Walid Yassine
-Mia Mohamad Al Sakka
-Mohammad Samir Alaa Eddine
-Mohammad Ryan Sadek Idriss
-Mohammad Taim Basel Al Moughrabi
-Ralph Shadi Alameddine
-Serena Marwan Saab
-Wael Khaled Shalabi
+"Adam Zakaria Baalbaki" ,
+"Ali Hassan Termos" ,
+"Ali Hussein Younes" ,
+"Alma Khalil Abdel Sater" ,
+"Amira Samia Al Amir Ayyash Al Sahmarani
+"Celina Rabih Al Massalkhi
+"Fatima Nader Taher
+"Ghalia Nader Awwad
+"Hala Youssef Al Moujarkash
+"Jawad Mohammad Al Sayed
+"Karim Walid Zaatary
+"Lara Jihad AL Jaroudi
+"Layan Samer Mouawiya
+"Luna Riad Malaeb
+"Maarouf Restom Al Kayssi
+"Malek Walid Yassine
+"Mia Mohamad Al Sakka
+"Mohammad Samir Alaa Eddine
+"Mohammad Ryan Sadek Idriss
+"Mohammad Taim Basel Al Moughrabi
+"Ralph Shadi Alameddine
+"Serena Marwan Saab
+"Wael Khaled Shalabi"
         // Continue until 23 students
     ],
 
