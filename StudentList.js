@@ -205,7 +205,7 @@ const studentsByClass = {
 "Line Hasan Reslan" ,
 "Lynn Mahmoud Nasser" ,
 "Malak Ali Ghabriss" ,
-"Manessa Khodor Saker"
+"Manessa Khodor Saker",
 "Manessa Rabih Berro" ,
 "Mariam Ali Majed" ,
 "Mira Kassem Saad" ,
@@ -645,16 +645,30 @@ for (const classCode in studentsByClass) {
         });
 
     if (matchingName) {
-        foundStudent = {
-            fullName: matchingName,
-            classCode: classCode
-        };
+    foundStudent = {
+        fullName: matchingName,
+        classCode: classCode
+    };
 
-        break;
-    }
+    break;
+}
 }
 
-        showStudent(foundStudent);
+/* If the student was not found */
+
+if (!foundStudent) {
+    showError(
+        "Name not found in this level. " +
+        "Nom introuvable dans ce niveau. " +
+        "Please verify the spelling or ask an ECS staff member."
+    );
+
+    return;
+}
+
+/* If the student was found */
+
+showStudent(foundStudent);
     }
 );
 
