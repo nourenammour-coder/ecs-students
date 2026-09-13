@@ -116,128 +116,152 @@ const classes = {
    G10A, G10B, G10C, SECONDE
 ===================================================== */
 
-const students = [
+/* =====================================================
+   STUDENTS GROUPED BY CLASS
+
+   Write only the student names inside their class.
+   Keep quotation marks and commas between names.
+===================================================== */
+
+const studentsByClass = {
 
     /* GRADE 7 A — 25 STUDENTS */
 
-    {
-        fullName: "Student Name One",
-        classCode: "G7A"
-    },
-
-    /* Add the other Grade 7 A students here */
+    G7A: [
+        "Student One Full Name",
+        "Student Two Full Name",
+        "Student Three Full Name"
+        // Continue until 25 students
+    ],
 
 
     /* GRADE 7 B — 25 STUDENTS */
 
-    {
-        fullName: "Student Name Two",
-        classCode: "G7B"
-    },
-
-    /* Add the other Grade 7 B students here */
+    G7B: [
+        "Student One Full Name",
+        "Student Two Full Name",
+        "Student Three Full Name"
+        // Continue until 25 students
+    ],
 
 
     /* GRADE 7 C — 24 STUDENTS */
 
-    {
-        fullName: "Student Name Three",
-        classCode: "G7C"
-    },
+    G7C: [
+        "Student One Full Name",
+        "Student Two Full Name",
+        "Student Three Full Name"
+        // Continue until 24 students
+    ],
 
-    /* Add the other Grade 7 C students here */
 
+    /* EB7 — 20 ÉLÈVES */
 
-    /* EB7 — 20 STUDENTS */
+    EB7: [
+“Adriana Fadi Kaidbey” ,
+“Ahmad Wissam Meaini” ,
+“Ali Hani Fayad Hamadeh” ,
+“Ali Ihab Jabber” ,
+“Elsa Issa Awada” ,
+“Jihad Jad Reslan” ,
+“Khalil Izzat Ghandour” ,
+“Line Hasan Reslan” ,
+“Lynn Mahmoud Nasser” ,
+“Malak Ali Ghabriss” ,
+“Manessa Rabih Berro” ,
+“Mariam Ali Majed” ,
+“Mira Kassem Saad” ,
+“Mona Darwish Serhal” ,
+“Noura Nabil Assi” ,
+“Reina Hasan Al Chaar” ,
+“Syla Rabih Halabi” ,
+“Talia Mohammad Hammoud” ,
+“Youssef Wissam Houry Homsi” ,
 
-    {
-        fullName: "Nom Complet Eleve",
-        classCode: "EB7"
-    },
-
-    /* Ajoutez les autres élèves de EB7 ici */
+        // Continuez jusqu’à 20 élèves
+    ],
 
 
     /* GRADE 8 A — 22 STUDENTS */
 
-    {
-        fullName: "Student Name Four",
-        classCode: "G8A"
-    },
-
-    /* Add the other Grade 8 A students here */
+    G8A: [
+        "Student One Full Name",
+        "Student Two Full Name",
+        "Student Three Full Name"
+        // Continue until 22 students
+    ],
 
 
     /* GRADE 8 B — 22 STUDENTS */
 
-    {
-        fullName: "Student Name Five",
-        classCode: "G8B"
-    },
-
-    /* Add the other Grade 8 B students here */
+    G8B: [
+        "Student One Full Name",
+        "Student Two Full Name",
+        "Student Three Full Name"
+        // Continue until 22 students
+    ],
 
 
     /* GRADE 8 C — 22 STUDENTS */
 
-    {
-        fullName: "Student Name Six",
-        classCode: "G8C"
-    },
+    G8C: [
+        "Student One Full Name",
+        "Student Two Full Name",
+        "Student Three Full Name"
+        // Continue until 22 students
+    ],
 
-    /* Add the other Grade 8 C students here */
 
+    /* EB8 — 12 ÉLÈVES */
 
-    /* EB8 — 12 STUDENTS */
-
-    {
-        fullName: "Nom Complet Eleve Deux",
-        classCode: "EB8"
-    },
-
-    /* Ajoutez les autres élèves de EB8 ici */
+    EB8: [
+        "Nom Complet Élève Un",
+        "Nom Complet Élève Deux",
+        "Nom Complet Élève Trois"
+        // Continuez jusqu’à 12 élèves
+    ],
 
 
     /* GRADE 10 A — 24 STUDENTS */
 
-    {
-        fullName: "Student Name Seven",
-        classCode: "G10A"
-    },
-
-    /* Add the other Grade 10 A students here */
+    G10A: [
+        "Student One Full Name",
+        "Student Two Full Name",
+        "Student Three Full Name"
+        // Continue until 24 students
+    ],
 
 
     /* GRADE 10 B — 23 STUDENTS */
 
-    {
-        fullName: "Student Name Eight",
-        classCode: "G10B"
-    },
-
-    /* Add the other Grade 10 B students here */
+    G10B: [
+        "Student One Full Name",
+        "Student Two Full Name",
+        "Student Three Full Name"
+        // Continue until 23 students
+    ],
 
 
     /* GRADE 10 C — 23 STUDENTS */
 
-    {
-        fullName: "Student Name Nine",
-        classCode: "G10C"
-    },
+    G10C: [
+        "Student One Full Name",
+        "Student Two Full Name",
+        "Student Three Full Name"
+        // Continue until 23 students
+    ],
 
-    /* Add the other Grade 10 C students here */
 
+    /* SECONDE — 8 ÉLÈVES */
 
-    /* SECONDE — 8 STUDENTS */
+    SECONDE: [
+        "Nom Complet Élève Un",
+        "Nom Complet Élève Deux",
+        "Nom Complet Élève Trois"
+        // Continuez jusqu’à 8 élèves
+    ]
 
-    {
-        fullName: "Nom Complet Eleve Trois",
-        classCode: "SECONDE"
-    }
-
-    /* Do not add a comma after the final student */
-];
-
+};
 
 /* MOTIVATIONAL MESSAGES */
 
@@ -428,47 +452,43 @@ searchForm.addEventListener(
         }
 
 
-        const foundStudent =
-            students.find(function (student) {
-                const studentClass =
-                    classes[student.classCode];
+        let foundStudent = null;
 
-                if (!studentClass) {
-                    return false;
-                }
+for (const classCode in studentsByClass) {
+    const studentClass = classes[classCode];
 
-                const correctName =
-                    normalizeName(student.fullName) ===
-                    enteredName;
+    if (!studentClass) {
+        continue;
+    }
 
-                const correctDepartment =
-                    !selectedDepartment ||
-                    normalizeName(studentClass.department) ===
-                    normalizeName(selectedDepartment);
+    const correctDepartment =
+        !selectedDepartment ||
+        normalizeName(studentClass.department) ===
+        normalizeName(selectedDepartment);
 
-                const correctLevel =
-                    !selectedLevel ||
-                    normalizeName(studentClass.level) ===
-                    normalizeName(selectedLevel);
+    const correctLevel =
+        !selectedLevel ||
+        normalizeName(studentClass.level) ===
+        normalizeName(selectedLevel);
 
-                return (
-                    correctName &&
-                    correctDepartment &&
-                    correctLevel
-                );
-            });
+    if (!correctDepartment || !correctLevel) {
+        continue;
+    }
 
+    const matchingName =
+        studentsByClass[classCode].find(function (studentName) {
+            return normalizeName(studentName) === enteredName;
+        });
 
-        if (!foundStudent) {
-            showError(
-                "Name not found in this level. " +
-                "Nom introuvable dans ce niveau. " +
-                "Please verify the spelling or ask an ECS staff member."
-            );
+    if (matchingName) {
+        foundStudent = {
+            fullName: matchingName,
+            classCode: classCode
+        };
 
-            return;
-        }
-
+        break;
+    }
+}
 
         showStudent(foundStudent);
     }
