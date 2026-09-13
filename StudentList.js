@@ -128,31 +128,31 @@ const studentsByClass = {
     /* GRADE 7 A — 25 STUDENTS */
 
     G7A: [
-Adam Hani Al Broush
-Adam Mohammad Khalifeh
-Ali Ahmad Hammoud
-Ali Imad Ibrahim
-Aya Khalil Hashem
-Aya Mohamad El Zein
-Ciel Youssef Al Mawla
-Elena Hasan Al Halabi
-Elia Youssef Moughnieh
-Hadi Mohamad Jibai
-Hanan Walid Akli
-Ilia Mohammad Hassan
-Julie Ramzi Malaeb
-Karim Maher Al Saifi
-Leya Ahmad Farhat
-Mahdi Ali Kanaan Omar
-Mahmoud Zuheir Bahloul
-Mohammad Ali Ghader
-Mohammad Ihab Al Hajj Shehade
-Mostafa Ahmad Itani
-Naya Cheikh Louay El Emad
-Naya Hussein Saad
-Omar Mohamad AL Nahass
-Remie Mazen Al Halabi
-Rim Haidar Awada
+"Adam Hani Al Broush" ,
+"Adam Mohammad Khalifeh" ,
+"Ali Ahmad Hammoud" ,
+"Ali Imad Ibrahim" ,
+"Aya Khalil Hashem" ,
+"Aya Mohamad El Zein" ,
+"Ciel Youssef Al Mawla" ,
+"Elena Hasan Al Halabi" ,
+"Elia Youssef Moughnieh" ,
+"Hadi Mohamad Jibai" ,
+"Hanan Walid Akli" ,
+"Ilia Mohammad Hassan" ,
+"Julie Ramzi Malaeb" ,
+"Karim Maher Al Saifi" ,
+"Leya Ahmad Farhat" ,
+"Mahdi Ali Kanaan Omar" ,
+"Mahmoud Zuheir Bahloul" ,
+"Mohammad Ali Ghader" ,
+"Mohammad Ihab Al Hajj Shehade" ,
+"Mostafa Ahmad Itani" ,
+"Naya Cheikh Louay El Emad" ,
+"Naya Hussein Saad" ,
+"Omar Mohamad AL Nahass" ,
+"Remie Mazen Al Halabi" ,
+"Rim Haidar Awada"
         // Continue until 25 students
     ],
 
@@ -160,31 +160,31 @@ Rim Haidar Awada
     /* GRADE 7 B — 25 STUDENTS */
 
     G7B: [
-Ali Hussein Harkous
-Alma Hassan Al Fata
-Amir Talal Shaddad
-Aya Mohamad Dalli
-Badih Tarek Yassine
-Batoul Hussein Khalife
-Celia Hasan Saeed
-Dani Shadi Bashroush
-Ella Nassim AL Hajjar
-Fadel Mazen Abbas
-Joy Jamil Ghasham
-Karim Mohammad Al Sayed
-Lea Hussein Helbawi
-Liam Marwan El Souky
-Lyn Mohamad Bainy
-Maria Khodr Nasreddine
-Marwan Jad Al Halabi
-Maysa Marwan Saab
-Mohammad Ali Abbas Al Outa
-Nai Arkan Harb
-Rafic Basel Al Katerji
-Rena Shadi Alameddine
-Rimi Adel Chami
-Ward Basel Al Moughrabi
-Zeina Nader Taher
+"Ali Hussein Harkous" ,
+"Alma Hassan Al Fata" ,
+"Amir Talal Shaddad" ,
+"Aya Mohamad Dalli" ,
+"Badih Tarek Yassine" ,
+"Batoul Hussein Khalife" ,
+"Celia Hasan Saeed" ,
+"Dani Shadi Bashroush" ,
+"Ella Nassim AL Hajjar" ,
+"Fadel Mazen Abbas" ,
+"Joy Jamil Ghasham" ,
+"Karim Mohammad Al Sayed" ,
+"Lea Hussein Helbawi" ,
+"Liam Marwan El Souky" ,
+"Lyn Mohamad Bainy" ,
+"Maria Khodr Nasreddine" ,
+"Marwan Jad Al Halabi" ,
+"Maysa Marwan Saab" ,
+"Mohammad Ali Abbas Al Outa" ,
+"Nai Arkan Harb" ,
+"Rafic Basel Al Katerji" ,
+"Rena Shadi Alameddine" ,
+"Rimi Adel Chami" ,
+"Ward Basel Al Moughrabi" ,
+"Zeina Nader Taher"
         // Continue until 25 students
     ],
 
