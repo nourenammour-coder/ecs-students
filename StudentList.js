@@ -128,9 +128,31 @@ const studentsByClass = {
     /* GRADE 7 A — 25 STUDENTS */
 
     G7A: [
-        "Student One Full Name",
-        "Student Two Full Name",
-        "Student Three Full Name"
+Adam Hani Al Broush
+Adam Mohammad Khalifeh
+Ali Ahmad Hammoud
+Ali Imad Ibrahim
+Aya Khalil Hashem
+Aya Mohamad El Zein
+Ciel Youssef Al Mawla
+Elena Hasan Al Halabi
+Elia Youssef Moughnieh
+Hadi Mohamad Jibai
+Hanan Walid Akli
+Ilia Mohammad Hassan
+Julie Ramzi Malaeb
+Karim Maher Al Saifi
+Leya Ahmad Farhat
+Mahdi Ali Kanaan Omar
+Mahmoud Zuheir Bahloul
+Mohammad Ali Ghader
+Mohammad Ihab Al Hajj Shehade
+Mostafa Ahmad Itani
+Naya Cheikh Louay El Emad
+Naya Hussein Saad
+Omar Mohamad AL Nahass
+Remie Mazen Al Halabi
+Rim Haidar Awada
         // Continue until 25 students
     ],
 
@@ -138,9 +160,31 @@ const studentsByClass = {
     /* GRADE 7 B — 25 STUDENTS */
 
     G7B: [
-        "Student One Full Name",
-        "Student Two Full Name",
-        "Student Three Full Name"
+Ali Hussein Harkous
+Alma Hassan Al Fata
+Amir Talal Shaddad
+Aya Mohamad Dalli
+Badih Tarek Yassine
+Batoul Hussein Khalife
+Celia Hasan Saeed
+Dani Shadi Bashroush
+Ella Nassim AL Hajjar
+Fadel Mazen Abbas
+Joy Jamil Ghasham
+Karim Mohammad Al Sayed
+Lea Hussein Helbawi
+Liam Marwan El Souky
+Lyn Mohamad Bainy
+Maria Khodr Nasreddine
+Marwan Jad Al Halabi
+Maysa Marwan Saab
+Mohammad Ali Abbas Al Outa
+Nai Arkan Harb
+Rafic Basel Al Katerji
+Rena Shadi Alameddine
+Rimi Adel Chami
+Ward Basel Al Moughrabi
+Zeina Nader Taher
         // Continue until 25 students
     ],
 
@@ -148,9 +192,30 @@ const studentsByClass = {
     /* GRADE 7 C — 24 STUDENTS */
 
     G7C: [
-        "Student One Full Name",
-        "Student Two Full Name",
-        "Student Three Full Name"
+Adam Ihab Halaweh
+Ahmad Samer Ahmad
+Ali Hasan Abou Taam
+Alice Hasan Hassouna
+Dina Mazen Al Oud
+Ghassan Mohammad Ali Houmani
+Haidar Mohammad El Khansa
+Joudi Khaled Kaddouha
+Karim Aref Haidar
+Lamia Ibrahim Tirani
+Lilia Bilal Hijazi
+Mahdi Ali Dia
+Manessa Hani Faour
+Maryam Haitham Joumaa Al Masri
+Mohammad Jawad Bassam Haysoun
+Mona Issa Dokmak
+Nai Rabih Enjbar
+Naya Hamza Fayez
+Naya Wissam Faour
+Rema Mohamad Moussa
+Salma Fadi Klaib
+Tia Mohamad Al Sakka
+Yasmina Shadi Barakat
+Youssef Rami Jalloul
         // Continue until 24 students
     ],
 
@@ -168,6 +233,7 @@ const studentsByClass = {
 "Line Hasan Reslan" ,
 "Lynn Mahmoud Nasser" ,
 "Malak Ali Ghabriss" ,
+"Manessa Khodor Saker"
 "Manessa Rabih Berro" ,
 "Mariam Ali Majed" ,
 "Mira Kassem Saad" ,
@@ -176,7 +242,7 @@ const studentsByClass = {
 "Reina Hasan Al Chaar" ,
 "Syla Rabih Halabi" ,
 "Talia Mohammad Hammoud" ,
-"Youssef Wissam Houry Homsi" ,
+"Youssef Wissam Houry Homsi"
 
         // Continuez jusqu’à 20 élèves
     ],
@@ -185,9 +251,28 @@ const studentsByClass = {
     /* GRADE 8 A — 22 STUDENTS */
 
     G8A: [
-        "Student One Full Name",
-        "Student Two Full Name",
-        "Student Three Full Name"
+"Adam Ali Al Haf" ,
+"Adnan Rami El Khatib" ,
+"Angelina Wissam El Daou" ,
+"Bahaa El Deen Jamil Daou" ,
+"Bashar Bashar AL Zarif" ,
+"Eline Fadi Youssef" ,
+"Eva Zakaria Baalbaki" ,
+"Fatima Mohammad Dimashk" ,
+"Hussein Ali Fawzi" ,
+"Jad Khaled Al-Zaatary" ,
+"Karim Ali Nasserdline" ,
+"Layan Samer Ahmad" ,
+"Mahdi Wissam Darwish" ,
+"Malak Mohamad Mazyad" ,
+"Malika Mostafa Daher" ,
+"Mira Wissam El Helou" ,
+"Mohammad Abdullah Ziad Yassine" ,
+"Narjes Hussein Khawaja" ,
+"Rama Mohammad Ghandour" ,
+"Salah Abdul Latif Ezz El Dine" ,
+"Sarah Wissam El Harakeh" ,
+"Sireen Omar AbedalKader"
         // Continue until 22 students
     ],
 
@@ -195,9 +280,28 @@ const studentsByClass = {
     /* GRADE 8 B — 22 STUDENTS */
 
     G8B: [
-        "Student One Full Name",
-        "Student Two Full Name",
-        "Student Three Full Name"
+"Ali Youssef Al Saadi" ,
+"Amar Ali Al Attar" ,
+"Aya Ali Issa" ,
+"Ayanoor Hussein Zaiter" ,
+"Bahij Imad Abo Kais" ,
+"Eva Issam Zaki" ,
+"Hanin Jad Lezeik" ,
+"Jolie Ibrahim Assaf" ,
+"Khaled Tarek Sabban" ,
+"Layan Khaled Hashem" ,
+"Mahdi Abdo Tarhini" ,
+"Mohammad Abbas Janbein" ,
+"Mohammad Ahmad Al Hajj" ,
+"Nour Al Zahraa Abbas Awwad" ,
+"Pia Mohammad Al Nazer" ,
+"Rayyan Khodor Beckdashy" ,
+"Rudy Hani Hmedeh" ,
+"Sari Hasan Karim" ,
+"Selena Hadi Allam" ,
+"Tia Ahmad Osayran" ,
+"Youssef Hasan Mroweh" ,
+"Zahraa Ali Khalife"
         // Continue until 22 students
     ],
 
@@ -205,9 +309,28 @@ const studentsByClass = {
     /* GRADE 8 C — 22 STUDENTS */
 
     G8C: [
-        "Student One Full Name",
-        "Student Two Full Name",
-        "Student Three Full Name"
+"Adam Hassan Al Fata" ,
+"Ali Mohammad Khalil" ,
+"Ali Tarek Kanso" ,
+"Atallah Atallah Aoun" ,
+"Bassem Nabil Raya" ,
+"Daniel Wissam El Aridi" ,
+"Fatima Mahdi Awada" ,
+"Hussein Ali Srour" ,
+"Jad Ahmad Ghader" ,
+"Jud Fouad Bazzi" ,
+"Judi Samer Al Wafai" ,
+"Karim Ali Ghader" ,
+"Layal Mohammad Al Haddad" ,
+"Omar Ayman Al Shami" ,
+"Rahaf Abbas Janbein" ,
+"Rama Khaled Itani" ,
+"Reina Rabah Mneimneh" ,
+"Selena Walid Yassine" ,
+"Tia Hasan Shehimy" ,
+"Yara Ali Bazzi" ,
+"Yasma Jamil Kahoul" ,
+"Youssef Jamil Kahoul" 
         // Continue until 22 students
     ],
 
@@ -215,9 +338,19 @@ const studentsByClass = {
     /* EB8 — 12 ÉLÈVES */
 
     EB8: [
-        "Nom Complet Élève Un",
-        "Nom Complet Élève Deux",
-        "Nom Complet Élève Trois"
+"Ahmad Jaafar Wahab" ,
+"Ali Hasan Hammoud" ,
+"Fahed Hani Al Mawla" ,
+"Hussein Mohammad Younnes" ,
+"Julia Majed Sabra" ,
+"Juliana Jalal Ibrahim" ,
+"Naya Rabih Halabi" ,
+"Rahaf Samer Al Husseini" ,
+"Reina Omar Behlok" ,
+"Taline Ziad Ezzo" ,
+"Yara Tarek Sibaii" ,
+"Yehia Mohamad Zakaria Itani"
+
         // Continuez jusqu’à 12 élèves
     ],
 
@@ -225,9 +358,30 @@ const studentsByClass = {
     /* GRADE 10 A — 24 STUDENTS */
 
     G10A: [
-        "Student One Full Name",
-        "Student Two Full Name",
-        "Student Three Full Name"
+Abed El Karim Assem Kreidieh
+Adam Issam Ousseily
+Adam Talal Shaddad
+Ali Amin Zreik
+Ali Mohamad Fahs
+Ali Al Reda Ali Fawzi
+Ali Al Rida Abbas Al Outa
+Celena Hasan Termos
+Celine Imad Shakhashero
+Dana Hasan Al Halabi
+Ghina Hisham Marrash
+Hoor Abdallah Al Souhail
+Hussein Dib Youssef
+Jude Ramzi Malaeb
+Laith Louay Samman
+Malek Tarek Sabban
+Maria Kassem Saad
+Mohamad Abdul latif Ezz El Dine
+Mohammad Jawad Hasan Nasreddine
+Nay Adham Khoueis
+Nour Imad Ibrahim
+Reine Imad Abou Naja
+Taha Bilal Shatila
+Tatiana Khodour Yamout
         // Continue until 24 students
     ],
 
@@ -235,9 +389,29 @@ const studentsByClass = {
     /* GRADE 10 B — 23 STUDENTS */
 
     G10B: [
-        "Student One Full Name",
-        "Student Two Full Name",
-        "Student Three Full Name"
+Adam Zakaria Baalbaki
+Ali Hassan Termos
+Ali Hussein Younes
+Alma Khalil Abdel Sater
+Amira Samia Al Amir Ayyash Al Sahmarani
+Celina Rabih Al Massalkhi
+Fatima Nader Taher
+Ghalia Nader Awwad
+Hala Youssef Al Moujarkash
+Jawad Mohammad Al Sayed
+Karim Walid Zaatary
+Lara Jihad AL Jaroudi
+Layan Samer Mouawiya
+Luna Riad Malaeb
+Maarouf Restom Al Kayssi
+Malek Walid Yassine
+Mia Mohamad Al Sakka
+Mohammad Samir Alaa Eddine
+Mohammad Ryan Sadek Idriss
+Mohammad Taim Basel Al Moughrabi
+Ralph Shadi Alameddine
+Serena Marwan Saab
+Wael Khaled Shalabi
         // Continue until 23 students
     ],
 
@@ -245,9 +419,29 @@ const studentsByClass = {
     /* GRADE 10 C — 23 STUDENTS */
 
     G10C: [
-        "Student One Full Name",
-        "Student Two Full Name",
-        "Student Three Full Name"
+"Ali Mohammad Barakat" ,
+"Ali El Reda Hasan Nasreddine" ,
+"Ali Reda Bassam Haysoun" ,
+"Christine Marwan El Souky" ,
+"Hind Hisham Yehya" ,
+"Hussein Mohammad El Zein" ,
+"Jamal Khaled Al-Zaatary" ,
+"Kamal Saadeddine Al Sherkawi Al Malla" ,
+"Karim Mohammad Ballout" ,
+"Karim Naser Majed" ,
+"Lea Abbas Awwad" ,
+"Mohamad Jawad Kobal Hijazi" ,
+"Omar Khaled Itani" ,
+"Othman Mohammad Al Baadarani" ,
+"Rana Bilal Hijazi" ,
+"Randa Hasan Rabah" ,
+"Razan Hussein Al Ouzeir" ,
+"Reda Malik Khalil" ,
+"Rinas Youssef Hassan AlSheikh" ,
+"Rowayda Abdel Rahman Al Tabosh" ,
+"Roy Mazen Al Souki" ,
+"Silya Ahmad Kassem El Ezmerli" ,
+"Yasmina Amer Jaafar"
         // Continue until 23 students
     ],
 
@@ -255,9 +449,14 @@ const studentsByClass = {
     /* SECONDE — 8 ÉLÈVES */
 
     SECONDE: [
-        "Nom Complet Élève Un",
-        "Nom Complet Élève Deux",
-        "Nom Complet Élève Trois"
+    "Acile Mohammad Younnes" ,
+    "Ahmad Mohammad Berro" ,
+    "Angela Ihab Jaber" ,
+    "Carine Tarek Abou Ibrahim" ,
+    "Julia Mohammad Saad" ,
+    "Lamis Mohammad Al Akhras" ,
+    "Lea Maher Hammoud" ,
+    "Rahaf Omar Behlok"
         // Continuez jusqu’à 8 élèves
     ]
 
