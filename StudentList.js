@@ -319,7 +319,26 @@ const motivationCard =
 
 const restartButton =
     document.getElementById("restartButton");
+/* CAPITALIZE THE NAME WHILE THE STUDENT IS TYPING */
 
+studentNameInput.addEventListener("input", function () {
+    const originalPosition = studentNameInput.selectionStart;
+
+    studentNameInput.value =
+        studentNameInput.value
+            .toLowerCase()
+            .replace(
+                /(^|[\s'-])([a-zà-ÿ])/g,
+                function (match, separator, letter) {
+                    return separator + letter.toUpperCase();
+                }
+            );
+
+    studentNameInput.setSelectionRange(
+        originalPosition,
+        originalPosition
+    );
+});
 
 /* READ THE DEPARTMENT AND LEVEL FROM THE QR LINK */
 
