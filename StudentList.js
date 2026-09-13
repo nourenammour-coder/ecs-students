@@ -1,10 +1,3 @@
-/* =====================================================
-   CLASS INFORMATION
-
-   Grade 10 C information was not provided.
-   Replace "TO UPDATE" with its block and floor.
-===================================================== */
-
 const classes = {
     G7A: {
         department: "English",
@@ -103,26 +96,6 @@ const classes = {
     }
 };
 
-
-/* =====================================================
-   STUDENT NAMES
-
-   Replace the examples with the real student names.
-
-   Available class codes:
-
-   G7A, G7B, G7C, EB7
-   G8A, G8B, G8C, EB8
-   G10A, G10B, G10C, SECONDE
-===================================================== */
-
-/* =====================================================
-   STUDENTS GROUPED BY CLASS
-
-   Write only the student names inside their class.
-   Keep quotation marks and commas between names.
-===================================================== */
-
 const studentsByClass = {
 
     /* GRADE 7 A — 25 STUDENTS */
@@ -155,7 +128,6 @@ const studentsByClass = {
 "Rim Haidar Awada"
         // Continue until 25 students
     ],
-
 
     /* GRADE 7 B — 25 STUDENTS */
 
@@ -305,7 +277,6 @@ const studentsByClass = {
         // Continue until 22 students
     ],
 
-
     /* GRADE 8 C — 22 STUDENTS */
 
     G8C: [
@@ -334,7 +305,6 @@ const studentsByClass = {
         // Continue until 22 students
     ],
 
-
     /* EB8 — 12 ÉLÈVES */
 
     EB8: [
@@ -350,10 +320,8 @@ const studentsByClass = {
 "Taline Ziad Ezzo" ,
 "Yara Tarek Sibaii" ,
 "Yehia Mohamad Zakaria Itani"
-
         // Continuez jusqu’à 12 élèves
     ],
-
 
     /* GRADE 10 A — 24 STUDENTS */
 
@@ -385,7 +353,6 @@ const studentsByClass = {
         // Continue until 24 students
     ],
 
-
     /* GRADE 10 B — 23 STUDENTS */
 
     G10B: [
@@ -415,7 +382,6 @@ const studentsByClass = {
         // Continue until 23 students
     ],
 
-
     /* GRADE 10 C — 23 STUDENTS */
 
     G10C: [
@@ -444,7 +410,6 @@ const studentsByClass = {
 "Yasmina Amer Jaafar"
         // Continue until 23 students
     ],
-
 
     /* SECONDE — 8 ÉLÈVES */
 
