@@ -393,24 +393,24 @@ const studentsByClass = {
 "Ali Hassan Termos" ,
 "Ali Hussein Younes" ,
 "Alma Khalil Abdel Sater" ,
-"Amira Samia Al Amir Ayyash Al Sahmarani
-"Celina Rabih Al Massalkhi
-"Fatima Nader Taher
-"Ghalia Nader Awwad
-"Hala Youssef Al Moujarkash
-"Jawad Mohammad Al Sayed
-"Karim Walid Zaatary
-"Lara Jihad AL Jaroudi
-"Layan Samer Mouawiya
-"Luna Riad Malaeb
-"Maarouf Restom Al Kayssi
-"Malek Walid Yassine
-"Mia Mohamad Al Sakka
-"Mohammad Samir Alaa Eddine
-"Mohammad Ryan Sadek Idriss
-"Mohammad Taim Basel Al Moughrabi
-"Ralph Shadi Alameddine
-"Serena Marwan Saab
+"Amira Samia Al Amir Ayyash Al Sahmarani" ,
+"Celina Rabih Al Massalkhi" ,
+"Fatima Nader Taher" ,
+"Ghalia Nader Awwad" ,
+"Hala Youssef Al Moujarkash" ,
+"Jawad Mohammad Al Sayed" ,
+"Karim Walid Zaatary" ,
+"Lara Jihad AL Jaroudi" ,
+"Layan Samer Mouawiya" ,
+"Luna Riad Malaeb" ,
+"Maarouf Restom Al Kayssi" ,
+"Malek Walid Yassine" ,
+"Mia Mohamad Al Sakka" ,
+"Mohammad Samir Alaa Eddine" ,
+"Mohammad Ryan Sadek Idriss" ,
+"Mohammad Taim Basel Al Moughrabi" ,
+"Ralph Shadi Alameddine" ,
+"Serena Marwan Saab" ,
 "Wael Khaled Shalabi"
         // Continue until 23 students
     ],
